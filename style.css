@@ -3,7 +3,7 @@
     height: 4vh;
     margin: 10px;
     outline-style: solid;
-    outline-width: 2px;
+    outline-width: 4px;
     outline-color: #000;
     background-color: #c9c8c5;
 }
@@ -35,6 +35,10 @@
     background-color: #10a138;
 }
 
-.col-xs-4{
-    /* height: 50em; */
+.rndBtn {
+    width: 30%;
+    height: 50px;
+    margin-top: 6vh;
+    font-weight: 800;
+    font-style: bold;
 }
