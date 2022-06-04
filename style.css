@@ -1,0 +1,40 @@
+.spot{
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000;
+    background-color: #c9c8c5;
+}
+.row{
+    flex-wrap: nowrap;
+}
+
+.brown {
+    background-color: #7a503a;
+}
+
+.red {
+    background-color: #d7040d;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.yellow {
+    background-color: #fece00;
+}
+
+.blue {
+    background-color: #0061ae;
+}
+
+.green {
+    background-color: #10a138;
+}
+
+.col-xs-4{
+    /* height: 50em; */
+}
