@@ -20,23 +20,6 @@ function Randomize() {
             tmpRooms[i][Math.floor(Math.random() * 2)] = shuffledObj.pop();
         }
     }
-    // document.getElementById("red1").innerHTML = rooms[0][0];
-    // document.getElementById("red2").innerHTML = rooms[0][1];
-    // document.getElementById("yellow1").innerHTML = rooms[1][0];
-    // document.getElementById("yellow2").innerHTML = rooms[1][1];
-    // document.getElementById("green1").innerHTML = rooms[2][0];
-    // document.getElementById("green2").innerHTML = rooms[2][1];
-    // document.getElementById("brown1").innerHTML = rooms[3][0];
-    // document.getElementById("brown2").innerHTML = rooms[3][1];
-    // document.getElementById("white1").innerHTML = rooms[4][0];
-    // document.getElementById("white2").innerHTML = rooms[4][1];
-    // document.getElementById("blue1").innerHTML = rooms[5][0];
-    // document.getElementById("blue2").innerHTML = rooms[5][1];
-    // console.log(rooms);
-    // console.log(objcts);
-    // console.log(shuffledObj);
-    // console.log(tmpobj);
-    // console.log(tmpRooms);
 
     var flattenArr = [];
     for (var i = 0; i < tmpRooms.length; i++) {
@@ -51,6 +34,7 @@ function Randomize() {
         $(this).css("background-color", flattenArr[index]); //reset
         // d96b18
     });
+    $(".base").text(Math.floor(Math.random() * 2) +1);
 
 
 }
