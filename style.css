@@ -47,3 +47,11 @@
     color: #ffffff;
     margin: 10px auto;
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #c9c8c5;
+}
