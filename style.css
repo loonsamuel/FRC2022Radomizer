@@ -1,18 +1,18 @@
 .spot{
     width: 4vh;
     height: 4vh;
-    margin: 10px;
-    outline-style: solid;
+    /* outline-style: solid; */
     outline-width: 4px;
-    outline-color: #000;
-    background-color: #c9c8c5;
+    opacity: 100;
+    
 }
 .row{
     flex-wrap: nowrap;
+    padding: 10px 0;
 }
 
 .brown {
-    background-color: #7a503a;
+    background-color: rgb(196, 196, 196);
 }
 
 .red {
@@ -20,6 +20,10 @@
 }
 
 .white {
+    background-color: #0e7d91;
+}
+
+.black {
     background-color: #ffffff;
 }
 
@@ -35,6 +39,10 @@
     background-color: #10a138;
 }
 
+.cable{
+    background-color: #06daff;
+}
+
 .rndBtn {
     width: 30%;
     height: 50px;
@@ -42,16 +50,32 @@
     font-weight: 800;
     font-style: bold;
 }
-.base{
-    font-size: 50px;
-    color: #ffffff;
-    margin: 10px auto;
-}
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #c9c8c5;
+.one{
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    background-image:url(img/1.png);
+    background-size: cover;
+}
+.two{
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    background-image:url(img/2.png);
+    background-size: cover;
+}
+.three{
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    background-image:url(img/3.png);
+    background-size: cover;
+}
+.four{
+    width: 4vh;
+    height: 4vh;
+    margin: 10px;
+    background-image:url(img/4.png);
+    background-size: cover;
 }
