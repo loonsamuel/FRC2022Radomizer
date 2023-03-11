@@ -6,12 +6,16 @@ var scores = new Map([
     [4, 11],
     [5, 6],
     [6, 13],
-    [7, 9]
+    [7, 12],
+    [8, 7],
+    [9, 9]
 ]);
 
 function Calculate(ele) {
     score = 0;
+    underwater = []
     var tasks = document.getElementsByName("task")
+    console.log(tasks)
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].parentElement.classList.contains("btn-primary")) {
             let id = tasks[i].id;
@@ -19,16 +23,26 @@ function Calculate(ele) {
             let task = Number(id[1]);
             if (task == 3) {
                 if (reverseString(id)[0] == "2") {
-                    task = 7;
+                    task = 9;
                 }
             }
             let _score = scores.get(task);
             if (score == 0 && (task == 5 || task == 6)) {continue}
-            if (task == 1 || task == 2 || task == 4 || task == 5) {
+            if (task == 1 || task == 2 || task == 7 || task == 8 || task == 4 || task == 5) {
                 _score *= reverseString(id)[0]-1
+                if (_score == 24 && task == 1) {
+                    underwater.push("1")
+                }
+                if (_score == 24 && task == 7) {
+                    underwater.push("1")
+                }
             }
             score += _score
+            console.log(score)
         }
+    }
+    if (JSON.stringify(underwater) == JSON.stringify(["1", "1"])) {
+        score += 12
     }
     ele.innerHTML = "Score: " + score
 }
