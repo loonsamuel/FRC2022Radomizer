@@ -23,8 +23,8 @@
           </div>
         </div>
         <div class="col-md-6 text-dark mt-5">
-          <button type="button" class="btn btn-outline-primary">Restart</button>
-          <button type="button" class="btn btn-outline-dark" onclick="UpdateScore()">Score: 0</button>
+          <button type="button" class="btn btn-outline-primary" onclick="Restart()">Restart</button>
+          <button type="button" class="btn btn-outline-dark" onclick="Calculate(this)">Score: 0</button>
         </div>
       </div>
     </div>
@@ -40,13 +40,13 @@
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input type="radio" name="task1" id="t1option1" autocomplete="off" > 0
+                <input type="radio" name="task" id="t1option1" autocomplete="off" onclick="UpdateScores(this)"> 0
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task1" id="t1option2" autocomplete="off"> 1
+                <input type="radio" name="task" id="t1option2" autocomplete="off" onclick="UpdateScores(this)"> 1
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task1" id="t1option3" autocomplete="off"> 2
+                <input type="radio" name="task" id="t1option3" autocomplete="off" onclick="UpdateScores(this)"> 2
               </label>
             </div>
           </div>
@@ -59,13 +59,13 @@
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input type="radio" name="task2" id="t2option1" autocomplete="off" > 0
+                <input type="radio" name="task" id="t2option1" autocomplete="off" onclick="UpdateScores(this)"> 0
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task2" id="t2option2" autocomplete="off"> 1
+                <input type="radio" name="task" id="t2option2" autocomplete="off" onclick="UpdateScores(this)"> 1
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task2" id="t2option3" autocomplete="off"> 2
+                <input type="radio" name="task" id="t2option3" autocomplete="off" onclick="UpdateScores(this)"> 2
               </label>
             </div>
           </div>
@@ -81,13 +81,13 @@
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input type="radio" name="task3" id="t3option1" autocomplete="off" > No
+                <input type="radio" name="task" id="t3option1" autocomplete="off" onclick="UpdateScores(this)"> No
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task3" id="t3option2" autocomplete="off"> A bit
+                <input type="radio" name="task" id="t3option2" autocomplete="off" onclick="UpdateScores(this)"> A bit
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task3" id="t3option3" autocomplete="off"> Yes
+                <input type="radio" name="task" id="t3option3" autocomplete="off" onclick="UpdateScores(this)"> Yes
               </label>
             </div>
           </div>
@@ -103,13 +103,13 @@
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input type="radio" name="task4" id="t4option1" autocomplete="off" > 0
+                <input type="radio" name="task" id="t4option1" autocomplete="off" onclick="UpdateScores(this)"> 0
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task4" id="t4option2" autocomplete="off"> 1
+                <input type="radio" name="task" id="t4option2" autocomplete="off" onclick="UpdateScores(this)"> 1
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task4" id="t4option3" autocomplete="off"> 2
+                <input type="radio" name="task" id="t4option3" autocomplete="off" onclick="UpdateScores(this)"> 2
               </label>
             </div>
           </div>
@@ -120,18 +120,18 @@
         <div class="card-header h5" style="font-weight: bold">Get bonus points</div>
         <div class="d-flex justify-content-between">
           <div class="card-body text-dark">
-            <p class="card-text">Number of island barriers not moved or damaged:</p> 
+            <p class="card-text">Number of island barriers not moved or damaged:</p>  
           </div>
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task5" id="t5option1" autocomplete="off"> 0
+                <input type="radio" name="task" id="t5option1" autocomplete="off" onclick="UpdateScores(this)"> 0
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task5" id="t5option2" autocomplete="off"> 1
+                <input type="radio" name="task" id="t5option2" autocomplete="off" onclick="UpdateScores(this)"> 1
               </label>
               <label class="btn btn-primary">
-                <input type="radio" name="task5" id="t5option3" autocomplete="off"> 2
+                <input type="radio" name="task" id="t5option3" autocomplete="off" onclick="UpdateScores(this)"> 2
               </label>
             </div>
           </div>
@@ -147,10 +147,10 @@
           <div class="m-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-primary">
-                <input type="radio" name="task6" id="t6option1" autocomplete="off"> No
+                <input type="radio" name="task" id="t6option1" autocomplete="off" onclick="UpdateScores(this)"> No
               </label>
               <label class="btn btn-outline-dark">
-                <input type="radio" name="task6" id="t6option2" autocomplete="off"> Yes
+                <input type="radio" name="task" id="t6option2" autocomplete="off" onclick="UpdateScores(this)"> Yes
               </label>
             </div>
           </div>
