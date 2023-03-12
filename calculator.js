@@ -15,7 +15,6 @@ function Calculate(ele) {
     score = 0;
     underwater = []
     var tasks = document.getElementsByName("task")
-    console.log(tasks)
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].parentElement.classList.contains("btn-primary")) {
             let id = tasks[i].id;
@@ -38,7 +37,6 @@ function Calculate(ele) {
                 }
             }
             score += _score
-            console.log(score)
         }
     }
     if (JSON.stringify(underwater) == JSON.stringify(["1", "1"])) {
@@ -84,6 +82,7 @@ function UpdateScores(ele) {
 
 function Restart() {
     score = 0;
+    document.getElementById("score").innerHTML = "Score: 0"
     var tasks = document.getElementsByName("task");
     for (let i = 0; i < tasks.length; i++) {
         let id = tasks[i].id
