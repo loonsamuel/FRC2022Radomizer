@@ -42,7 +42,8 @@ function Calculate(ele) {
     if (JSON.stringify(underwater) == JSON.stringify(["1", "1"])) {
         score += 12
     }
-    ele.innerHTML = "Score: " + score
+    // ele.innerHTML = "Score: " + score
+    document.getElementById("score").innerHTML = "Score: " + score;
 }
 
 function reverseString(str) {
@@ -78,6 +79,7 @@ function UpdateScores(ele) {
         score += _score
     } 
     */
+   Calculate()
 }
 
 function Restart() {
