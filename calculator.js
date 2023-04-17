@@ -105,4 +105,5 @@ function Restart() {
         }
         document.getElementById(id).parentElement.classList.remove("active");
     }
+    Calculate()
 }
