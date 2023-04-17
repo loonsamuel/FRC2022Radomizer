@@ -26,7 +26,7 @@ function Calculate(ele) {
                 }
             }
             let _score = scores.get(task);
-            if (score == 0 && (task == 5 || task == 6)) {continue}
+            if (score == 0 && task == 6) {continue}
             if (task == 1 || task == 2 || task == 7 || task == 8 || task == 4 || task == 5) {
                 _score *= reverseString(id)[0]-1
                 if (_score == 24 && task == 1) {
