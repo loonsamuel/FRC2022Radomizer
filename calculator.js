@@ -11,7 +11,11 @@ var scores = new Map([
     [9, 9]
 ]);
 
-function Calculate(ele) {
+window.onload = function() {
+    Calculate()
+}
+
+function Calculate() {
     score = 0;
     underwater = []
     var tasks = document.getElementsByName("task")
