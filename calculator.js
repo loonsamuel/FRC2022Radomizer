@@ -11,18 +11,18 @@ var scores = new Map([
     [9, 9]
 ]);
 
-window.onload = function() {
-    Calculate()
+window.onload = function () {
+    Calculate();
 }
 
 function Calculate() {
     score = 0;
     underwater = []
-    var tasks = document.getElementsByName("task")
+    var tasks = document.querySelectorAll('input');
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].parentElement.classList.contains("btn-primary")) {
             let id = tasks[i].id;
-            if (reverseString(id)[0] == "1") {continue}
+            if (reverseString(id)[0] == "1") { continue }
             let task = Number(id[1]);
             if (task == 3) {
                 if (reverseString(id)[0] == "2") {
@@ -30,9 +30,9 @@ function Calculate() {
                 }
             }
             let _score = scores.get(task);
-            if (score == 0 && task == 6) {continue}
+            if (score == 0 && task == 6) { continue }
             if (task == 1 || task == 2 || task == 7 || task == 8 || task == 4 || task == 5) {
-                _score *= reverseString(id)[0]-1
+                _score *= reverseString(id)[0] - 1
                 if (_score == 24 && task == 1) {
                     underwater.push("1")
                 }
@@ -56,7 +56,7 @@ function reverseString(str) {
 
 function UpdateScores(ele) {
     var id = ele.id
-    for (let i = 1; i < ele.parentElement.parentElement.childElementCount+1; i++) {
+    for (let i = 1; i < ele.parentElement.parentElement.childElementCount + 1; i++) {
         id = reverseString(id)
         var _id = id.replace(id[0], i)
         id = reverseString(id)
@@ -68,28 +68,53 @@ function UpdateScores(ele) {
     }
     ele.parentElement.classList.remove("btn-outline-dark");
     ele.parentElement.classList.add("btn-primary");
-    /*
-    var task = Number(id[1]);
-    if (task == 3) {
-        if (reverseString(id)[0] == 2) {
-            task = 7
+    Calculate()
+    if (ele.name == "submarine" || ele.name == "submarineP") {
+        let submarine = 2
+        let submarines = document.getElementsByName("submarine");
+        let submarinesP = document.getElementsByName("submarineP");
+        submarine -= ele.value
+        if (ele.name == "submarine") {
+            for (let i=0; i<submarinesP.length; i++) {
+                if (submarinesP[i].value > submarine) {submarinesP[i].disabled = true}
+                else {submarinesP[i].disabled = false}
+            }
+        }
+        else if (ele.name == "submarineP") {
+            for (let i=0; i<submarines.length; i++) {
+                // console.log(submarines[i].value)
+                if (submarines[i].value > submarine) {submarines[i].disabled = true}
+                else {submarines[i].disabled = false}
+            }
         }
     }
-    var _score = scores.get(task)
-    if (task == 1 || task == 2 || task == 4 || task == 5) {
-        _score *= reverseString(id)[0]-1
+    else if (ele.name == "server" || ele.name == "serverP") {
+        let server = 2;
+        let servers = document.getElementsByName("server");
+        let serversP = document.getElementsByName("serverP");
+        server -= ele.value
+        if (ele.name == "server") {
+            for (let i=0; i<serversP.length; i++) {
+                if (serversP[i].value > server) {serversP[i].disabled = true}
+                else {serversP[i].disabled = false}
+            }
+        }
+        else if (ele.name == "serverP") {
+            for (let i=0; i<servers.length; i++) {
+                if (servers[i].value > server) {servers[i].disabled = true}
+                else {servers[i].disabled = false}
+            }
+        }
     }
-    if (reverseString(id)[0] != 1) {
-        score += _score
-    } 
-    */
-   Calculate()
 }
 
 function Restart() {
     score = 0;
     document.getElementById("score").innerHTML = "Score: 0"
-    var tasks = document.getElementsByName("task");
+    // var tasks = document.getElementsByName("task");
+
+    var tasks = document.querySelectorAll('input');
+
     for (let i = 0; i < tasks.length; i++) {
         let id = tasks[i].id
         if (reverseString(id)[0] == "1" && id[1] != "5") {
